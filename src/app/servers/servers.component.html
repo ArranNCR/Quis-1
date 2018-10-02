@@ -1,0 +1,29 @@
+
+
+<label>Ketik disini</label>
+
+<input 
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button 
+  class="btn btn-primary" 
+  [disabled]="!allowNewServer"
+  (click)="onCreationStatus()">Add Server</button>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated; else noServer">Server telah dibuat, nama server adalah {{ serverName }}</p>
+<ng-template #noServer>
+  <p>No server was created</p>
+ </ng-template>
+<!-- <app-server *ngFor="let server of servers"></app-server>
+<app-server></app-server> -->
+  <!-- <input 
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button class="btn btn-primary" [disabled]="!allowNewServer"(click)="onCreationStatus()">Tombol </button>
+<p>{{ serverCreationStatus }}</p> -->
+ <app-server></app-server>
+<app-server></app-server>

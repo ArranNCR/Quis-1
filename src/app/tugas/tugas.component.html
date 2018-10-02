@@ -1,0 +1,30 @@
+<label>Isi dibawah</label>
+<!-- <input 
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+  <!-- <input 
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button 
+class="btn btn-primary" 
+[disabled]="buttoncheck()"
+(click)="clear()">Add</button>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<!-- <p *ngIf="serverCreated">Server telah dibuat, nama server adalah {{ serverName }}</p>
+<app-server></app-server>
+<app-server></app-server> --> -->
+<input 
+  type="text"
+  class="form-control"
+  [(ngModel)]="username">
+<p>Nama : {{username}}</p>
+<button 
+  class="btn btn-primary" 
+  [disabled]="buttoncheck()"
+  (click)="clear()">Add</button>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<app-server></app-server>
+<app-server></app-server>

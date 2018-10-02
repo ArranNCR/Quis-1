@@ -1,0 +1,10 @@
+<p>Tugas 3</p>
+
+<button 
+  class="btn btn-primary" 
+  (click)="onCreationStatus()">Tampilkan Detil</button>
+<br>
+<p>{{variabel}}</p>
+<p *ngFor="let angka of log; let j = index"
+[ngClass]="{warna: j >= 4 }"
+[ngStyle]="{'background-color': j >= 4 ? 'blue' : 'white'}">{{ angka }}</p>
