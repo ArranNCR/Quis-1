@@ -1,1 +1,35 @@
-bbbb
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jam Digital</title>
+    <link rel="stylesheet" type="text/css" href="jam_digital.css">
+    <link href='2.jpg' rel ='shortcut icon'>
+    <script>
+            function jam() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                var dn = "WIB"
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('digital').innerHTML =
+                h + ":" + m + ":" + s  +dn;
+                var t = setTimeout(jam, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};
+                return i;
+            } 
+            </script>
+</head>
+<body onload="jam()" style="font-family: 'Times New Roman', Times, serif;">
+    <div id="text">
+            <marquee><h1>Jam Digital</h1></marquee>
+    </div>
+    <div id="back">
+        <div id="digital">
+        </div>
+    </div>
+</body>
+</html>
